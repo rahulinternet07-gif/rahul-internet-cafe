@@ -1,0 +1,1429 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rahul Internet Cafe | Budhlada</title>
+<meta name="description" content="Rahul Internet Cafe - All Online Services Available Under One Roof">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f5f7fb;
+  color:#172033;
+  line-height:1.6;
+}
+
+nav{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid #e5e7eb;
+  padding:12px 6%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.nav-brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-weight:800;
+  font-size:20px;
+}
+
+.nav-brand img{
+  width:48px;
+  height:48px;
+  object-fit:contain;
+  border-radius:12px;
+}
+
+.nav-links{
+  display:flex;
+  gap:25px;
+  align-items:center;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:#172033;
+  font-weight:600;
+}
+
+.nav-links a:hover{
+  color:#2563eb;
+}
+
+.nav-button{
+  background:#2563eb!important;
+  color:white!important;
+  padding:10px 18px;
+  border-radius:25px;
+}
+
+/* HERO */
+
+.hero{
+  min-height:650px;
+  padding:80px 6%;
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  align-items:center;
+  gap:50px;
+  background:
+    radial-gradient(circle at top right,#dbeafe 0,transparent 35%),
+    linear-gradient(135deg,#fff,#eef5ff);
+}
+
+.badge{
+  display:inline-block;
+  background:#e0edff;
+  color:#1d4ed8;
+  padding:8px 16px;
+  border-radius:30px;
+  font-weight:700;
+  margin-bottom:20px;
+  font-size:14px;
+}
+
+.hero h1{
+  font-size:clamp(42px,6vw,76px);
+  line-height:1.05;
+  margin-bottom:20px;
+  letter-spacing:-2px;
+}
+
+.hero h1 span{
+  color:#2563eb;
+}
+
+.hero p{
+  font-size:19px;
+  color:#596579;
+  max-width:620px;
+  margin-bottom:30px;
+}
+
+.hero-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  text-decoration:none;
+  padding:14px 22px;
+  border-radius:12px;
+  font-weight:700;
+  transition:.3s;
+  border:none;
+  cursor:pointer;
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+.btn-primary{
+  background:#2563eb;
+  color:white;
+}
+
+.btn-whatsapp{
+  background:#16a34a;
+  color:white;
+}
+
+.btn-outline{
+  border:2px solid #d5dbea;
+  color:#172033;
+  background:white;
+}
+
+/* PHOTO */
+
+.photo-card{
+  min-height:430px;
+  border-radius:30px;
+  overflow:hidden;
+  background:linear-gradient(145deg,#172554,#2563eb,#60a5fa);
+  box-shadow:0 25px 60px rgba(37,99,235,.25);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.photo-placeholder{
+  width:86%;
+  height:82%;
+  border:2px dashed rgba(255,255,255,.55);
+  border-radius:25px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  color:white;
+  text-align:center;
+  padding:30px;
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(8px);
+}
+
+.photo-icon{
+  font-size:70px;
+  margin-bottom:15px;
+}
+
+.photo-placeholder h3{
+  font-size:25px;
+  margin-bottom:8px;
+}
+
+.photo-placeholder p{
+  color:#e0ecff;
+}
+
+/* SECTIONS */
+
+section{
+  padding:85px 6%;
+}
+
+.section-heading{
+  text-align:center;
+  max-width:700px;
+  margin:0 auto 50px;
+}
+
+.section-heading small{
+  color:#2563eb;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:2px;
+}
+
+.section-heading h2{
+  font-size:40px;
+  margin:10px 0;
+}
+
+.section-heading p{
+  color:#667085;
+}
+
+/* ABOUT */
+
+.about{
+  background:white;
+}
+
+.about-grid{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:35px;
+}
+
+.about-card{
+  background:#f8fafc;
+  padding:35px;
+  border-radius:22px;
+  border:1px solid #e8edf5;
+}
+
+.about-card h3{
+  font-size:24px;
+  margin-bottom:12px;
+}
+
+.about-card p{
+  color:#667085;
+}
+
+.feature-list{
+  list-style:none;
+  margin-top:20px;
+}
+
+.feature-list li{
+  padding:10px 0;
+  font-weight:600;
+}
+
+/* SERVICES */
+
+.services{
+  background:#f5f7fb;
+}
+
+.service-grid{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.service-card{
+  background:white;
+  padding:28px 20px;
+  border-radius:20px;
+  border:1px solid #e7ebf2;
+  transition:.3s;
+  text-align:center;
+  cursor:pointer;
+}
+
+.service-card:hover{
+  transform:translateY(-8px);
+  border-color:#93c5fd;
+  box-shadow:0 18px 35px rgba(37,99,235,.13);
+}
+
+.service-icon{
+  width:58px;
+  height:58px;
+  margin:0 auto 15px;
+  border-radius:16px;
+  background:#eff6ff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+}
+
+.service-card h3{
+  font-size:18px;
+  margin-bottom:7px;
+}
+
+.service-card p{
+  font-size:14px;
+  color:#778196;
+}
+
+/* CTA */
+
+.cta{
+  padding:70px 6%;
+  background:linear-gradient(135deg,#172554,#2563eb);
+  color:white;
+  text-align:center;
+}
+
+.cta h2{
+  font-size:42px;
+  margin-bottom:12px;
+}
+
+.cta p{
+  color:#dbeafe;
+  margin-bottom:25px;
+}
+
+/* CONTACT */
+
+.contact{
+  background:white;
+}
+
+.contact-grid{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.contact-card{
+  padding:30px;
+  border-radius:20px;
+  background:#f8fafc;
+  text-align:center;
+  border:1px solid #e7ebf2;
+}
+
+.contact-card .icon{
+  font-size:35px;
+  margin-bottom:10px;
+}
+
+.contact-card h3{
+  margin-bottom:8px;
+}
+
+.contact-card p,
+.contact-card a{
+  color:#667085;
+  text-decoration:none;
+  word-break:break-word;
+}
+
+/* FOOTER */
+
+footer{
+  background:#0f172a;
+  color:white;
+  padding:40px 6%;
+  text-align:center;
+}
+
+footer img{
+  width:65px;
+  height:65px;
+  object-fit:contain;
+  border-radius:15px;
+  margin-bottom:12px;
+  background:white;
+  padding:4px;
+}
+
+footer p{
+  color:#94a3b8;
+  margin-top:8px;
+}
+
+.footer-buttons{
+  margin-top:20px;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.footer-buttons a{
+  text-decoration:none;
+  color:white;
+  border:1px solid #334155;
+  padding:9px 15px;
+  border-radius:20px;
+  font-size:14px;
+}
+
+/* POPUP */
+
+.modal{
+  display:none;
+  position:fixed;
+  z-index:2000;
+  inset:0;
+  background:rgba(15,23,42,.72);
+  backdrop-filter:blur(6px);
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+
+.modal.active{
+  display:flex;
+}
+
+.modal-box{
+  width:100%;
+  max-width:520px;
+  max-height:90vh;
+  overflow:auto;
+  background:white;
+  border-radius:25px;
+  padding:32px;
+  position:relative;
+  box-shadow:0 25px 80px rgba(0,0,0,.3);
+  animation:popup .25s ease;
+}
+
+@keyframes popup{
+  from{
+    opacity:0;
+    transform:translateY(20px) scale(.97);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0) scale(1);
+  }
+}
+
+.close{
+  position:absolute;
+  right:18px;
+  top:14px;
+  width:38px;
+  height:38px;
+  border:0;
+  border-radius:50%;
+  background:#f1f5f9;
+  font-size:22px;
+  cursor:pointer;
+}
+
+.modal-icon{
+  width:70px;
+  height:70px;
+  border-radius:20px;
+  background:#eff6ff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:36px;
+  margin-bottom:18px;
+}
+
+.modal-box h2{
+  font-size:30px;
+  margin-bottom:10px;
+}
+
+.modal-box p{
+  color:#667085;
+  margin-bottom:18px;
+}
+
+.modal-box ul{
+  padding-left:22px;
+  margin-bottom:25px;
+}
+
+.modal-box li{
+  margin:8px 0;
+}
+
+.official{
+  width:100%;
+  background:#2563eb;
+  color:white;
+  border-radius:12px;
+  padding:15px;
+  text-align:center;
+  text-decoration:none;
+  display:block;
+  font-weight:700;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+  .hero{
+    grid-template-columns:1fr;
+    padding-top:55px;
+  }
+
+  .service-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .about-grid{
+    grid-template-columns:1fr;
+  }
+
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .nav-links{
+    display:none;
+  }
+}
+
+@media(max-width:600px){
+
+  nav{
+    padding:10px 5%;
+  }
+
+  .nav-brand{
+    font-size:16px;
+  }
+
+  .hero{
+    padding:55px 5%;
+  }
+
+  .hero h1{
+    font-size:45px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  .photo-card{
+    min-height:350px;
+  }
+
+  section{
+    padding:65px 5%;
+  }
+
+  .section-heading h2{
+    font-size:32px;
+  }
+
+  .service-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
+  }
+
+  .btn{
+    width:100%;
+  }
+
+  .cta h2{
+    font-size:32px;
+  }
+
+  .modal-box{
+    padding:25px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+
+  <div class="nav-brand">
+    <img src="logo.jpg" alt="Rahul Internet Cafe Logo">
+    <span>Rahul Internet Cafe</span>
+  </div>
+
+  <div class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+
+    <a class="nav-button" href="tel:+919056250847">
+      Call Now
+    </a>
+  </div>
+
+</nav>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+  <div>
+
+    <span class="badge">
+      💻 Your Digital Service Partner
+    </span>
+
+    <h1>
+      Rahul<br>
+      <span>Internet Cafe</span>
+    </h1>
+
+    <p>
+      All Online Services Available Under One Roof.
+      Fast, Reliable and Convenient Digital Services for Everyone.
+    </p>
+
+    <div class="hero-buttons">
+
+      <a class="btn btn-whatsapp"
+         href="https://wa.me/919056250847"
+         target="_blank">
+        💬 WhatsApp Us
+      </a>
+
+      <a class="btn btn-primary"
+         href="tel:+919056250847">
+        📞 Call Now
+      </a>
+
+      <a class="btn btn-outline"
+         href="https://maps.app.goo.gl/EZPfqCVfQenYwhzb9"
+         target="_blank">
+        📍 Find Us
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <!-- SHOP PHOTO PLACEHOLDER -->
+  <div class="photo-card">
+
+    <div class="photo-placeholder">
+
+      <div class="photo-icon">🏪</div>
+
+      <h3>Rahul Internet Cafe</h3>
+
+      <p>
+        Your Shop Photo Will Appear Here
+      </p>
+
+      <br>
+
+      <small>
+        📸 Shop photo can be added later
+      </small>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section class="about" id="about">
+
+  <div class="section-heading">
+
+    <small>About Us</small>
+
+    <h2>
+      Everything Online, One Place
+    </h2>
+
+    <p>
+      Rahul Internet Cafe helps customers with everyday
+      online, digital and government-related services.
+    </p>
+
+  </div>
+
+
+  <div class="about-grid">
+
+    <div class="about-card">
+
+      <h3>💙 Why Choose Us?</h3>
+
+      <p>
+        We provide convenient online services with a simple,
+        customer-friendly approach.
+      </p>
+
+      <ul class="feature-list">
+        <li>✓ Fast Online Services</li>
+        <li>✓ Easy & Convenient</li>
+        <li>✓ Multiple Services Under One Roof</li>
+        <li>✓ Friendly Customer Support</li>
+      </ul>
+
+    </div>
+
+
+    <div class="about-card">
+
+      <h3>📍 Our Location</h3>
+
+      <p>
+        Rahul Internet Cafe<br>
+        Budhlada, Mansa, Punjab
+      </p>
+
+      <br>
+
+      <a class="btn btn-primary"
+         href="https://maps.app.goo.gl/EZPfqCVfQenYwhzb9"
+         target="_blank">
+        📍 Open Google Maps
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SERVICES -->
+<section class="services" id="services">
+
+  <div class="section-heading">
+
+    <small>Our Services</small>
+
+    <h2>
+      Online Services We Provide
+    </h2>
+
+    <p>
+      Click any service to see details and open its official website.
+    </p>
+
+  </div>
+
+
+  <div class="service-grid">
+
+
+    <!-- AADHAAR -->
+    <div class="service-card"
+         onclick="openService('aadhaar')">
+
+      <div class="service-icon">🪪</div>
+
+      <h3>Aadhaar Services</h3>
+
+      <p>
+        Click for details
+      </p>
+
+    </div>
+
+
+    <!-- PAN -->
+    <div class="service-card"
+         onclick="openService('pan')">
+
+      <div class="service-icon">💳</div>
+
+      <h3>PAN Card</h3>
+
+      <p>
+        Click for details
+      </p>
+
+    </div>
+
+
+    <!-- VOTER -->
+    <div class="service-card"
+         onclick="openService('voter')">
+
+      <div class="service-icon">🗳️</div>
+
+      <h3>Voter Card</h3>
+
+      <p>
+        Click for details
+      </p>
+
+    </div>
+
+
+    <!-- PASSPORT -->
+    <div class="service-card"
+         onclick="openService('passport')">
+
+      <div class="service-icon">📘</div>
+
+      <h3>Passport</h3>
+
+      <p>
+        Click for details
+      </p>
+
+    </div>
+
+
+    <!-- ONLINE FORMS -->
+    <div class="service-card"
+         onclick="openService('forms')">
+
+      <div class="service-icon">📝</div>
+
+      <h3>Online Forms</h3>
+
+      <p>
+        Click for details
+      </p>
+
+    </div>
+
+
+    <!-- PRINT -->
+    <div class="service-card"
+         onclick="openService('print')">
+
+      <div class="service-icon">🖨️</div>
+
+      <h3>Print & Scan</h3>
+
+      <p>
+        Click for details
+      </p>
+
+    </div>
+
+
+    <!-- CERTIFICATES -->
+    <div class="service-card"
+         onclick="openService('certificates')">
+
+      <div class="service-icon">📜</div>
+
+      <h3>Certificates</h3>
+
+      <p>
+        Click for details
+      </p>
+
+    </div>
+
+
+    <!-- RESULT -->
+    <div class="service-card"
+         onclick="openService('result')">
+
+      <div class="service-icon">🎓</div>
+
+      <h3>Result & Admit Card</h3>
+
+      <p>
+        Click for details
+      </p>
+
+    </div>
+
+
+    <!-- E SHRΑM -->
+    <div class="service-card"
+         onclick="openService('eshram')">
+
+      <div class="service-icon">👷</div>
+
+      <h3>E-Shram</h3>
+
+      <p>
+        Click for details
+      </p>
+
+    </div>
+
+
+    <!-- ABHA -->
+    <div class="service-card"
+         onclick="openService('abha')">
+
+      <div class="service-icon">❤️</div>
+
+      <h3>ABHA Card</h3>
+
+      <p>
+        Click for details
+      </p>
+
+    </div>
+
+
+    <!-- ONLINE APPLICATION -->
+    <div class="service-card"
+         onclick="openService('applications')">
+
+      <div class="service-icon">💻</div>
+
+      <h3>Online Applications</h3>
+
+      <p>
+        Click for details
+      </p>
+
+    </div>
+
+
+    <!-- OTHER -->
+    <div class="service-card"
+         onclick="openService('other')">
+
+      <div class="service-icon">⚡</div>
+
+      <h3>Other Online Services</h3>
+
+      <p>
+        Click for details
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CTA -->
+<section class="cta">
+
+  <h2>
+    Need an Online Service?
+  </h2>
+
+  <p>
+    Contact Rahul Internet Cafe today.
+  </p>
+
+  <div class="hero-buttons"
+       style="justify-content:center;">
+
+    <a class="btn btn-whatsapp"
+       href="https://wa.me/919056250847"
+       target="_blank">
+      💬 Chat on WhatsApp
+    </a>
+
+    <a class="btn btn-outline"
+       href="tel:+919056250847">
+      📞 90562-50847
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+  <div class="section-heading">
+
+    <small>Contact</small>
+
+    <h2>
+      Get In Touch
+    </h2>
+
+    <p>
+      Contact us for online services and assistance.
+    </p>
+
+  </div>
+
+
+  <div class="contact-grid">
+
+    <div class="contact-card">
+
+      <div class="icon">📞</div>
+
+      <h3>Call Us</h3>
+
+      <a href="tel:+919056250847">
+        90562-50847
+      </a>
+
+      <br>
+
+      <a href="tel:+918556880250">
+        8556880250
+      </a>
+
+    </div>
+
+
+    <div class="contact-card">
+
+      <div class="icon">📧</div>
+
+      <h3>Email</h3>
+
+      <a href="mailto:rahulinternet07@gmail.com">
+        rahulinternet07@gmail.com
+      </a>
+
+    </div>
+
+
+    <div class="contact-card">
+
+      <div class="icon">📍</div>
+
+      <h3>Location</h3>
+
+      <p>
+        Budhlada, Mansa, Punjab
+      </p>
+
+      <br>
+
+      <a class="btn btn-primary"
+         href="https://maps.app.goo.gl/EZPfqCVfQenYwhzb9"
+         target="_blank">
+        View Location
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+  <img src="logo.jpg"
+       alt="Rahul Internet Cafe">
+
+  <h2>
+    Rahul Internet Cafe
+  </h2>
+
+  <p>
+    All Online Services Available Under One Roof
+  </p>
+
+  <div class="footer-buttons">
+
+    <a href="https://wa.me/919056250847"
+       target="_blank">
+      WhatsApp
+    </a>
+
+    <a href="https://whatsapp.com/channel/0029Vb8uns7AYlUEpvDTAs18"
+       target="_blank">
+      WhatsApp Channel
+    </a>
+
+    <a href="https://maps.app.goo.gl/EZPfqCVfQenYwhzb9"
+       target="_blank">
+      Google Maps
+    </a>
+
+    <a href="mailto:rahulinternet07@gmail.com">
+      Email
+    </a>
+
+  </div>
+
+  <p style="margin-top:25px;">
+    © 2026 Rahul Internet Cafe. All Rights Reserved.
+  </p>
+
+</footer>
+
+
+<!-- SERVICE POPUP -->
+
+<div class="modal"
+     id="serviceModal"
+     onclick="closeOutside(event)">
+
+  <div class="modal-box">
+
+    <button class="close"
+            onclick="closeModal()">
+      ×
+    </button>
+
+    <div class="modal-icon"
+         id="modalIcon">
+      💻
+    </div>
+
+    <h2 id="modalTitle">
+      Service
+    </h2>
+
+    <p id="modalDescription">
+      Service details
+    </p>
+
+    <ul id="modalList">
+    </ul>
+
+    <a id="officialButton"
+       class="official"
+       href="#"
+       target="_blank"
+       rel="noopener noreferrer">
+      🌐 Open Official Website
+    </a>
+
+  </div>
+
+</div>
+
+
+<script>
+
+/* SERVICE DATA */
+
+const services = {
+
+  aadhaar: {
+    icon:"🪪",
+    title:"Aadhaar Services",
+    description:"Official Aadhaar services and online assistance.",
+    list:[
+      "Download Aadhaar",
+      "Address Update",
+      "Check Update Status",
+      "Lock / Unlock Biometrics",
+      "Other Aadhaar services"
+    ],
+    url:"https://www.uidai.gov.in/"
+  },
+
+
+  pan: {
+    icon:"💳",
+    title:"PAN Card",
+    description:"PAN-related online services and application assistance.",
+    list:[
+      "PAN application",
+      "PAN correction",
+      "PAN-related online services",
+      "Check available official services"
+    ],
+    url:"https://www.incometax.gov.in/iec/foportal/"
+  },
+
+
+  voter: {
+    icon:"🗳️",
+    title:"Voter Card",
+    description:"Official Election Commission voter services.",
+    list:[
+      "New Voter Registration",
+      "Voter details services",
+      "Search voter information",
+      "Application-related services",
+      "Download available voter documents"
+    ],
+    url:"https://voters.eci.gov.in/"
+  },
+
+
+  passport: {
+    icon:"📘",
+    title:"Passport Services",
+    description:"Official Passport Seva services.",
+    list:[
+      "Fresh Passport",
+      "Passport Re-issue",
+      "Track application",
+      "Appointment services",
+      "Other Passport Seva services"
+    ],
+    url:"https://www.passportindia.gov.in/"
+  },
+
+
+  forms: {
+    icon:"📝",
+    title:"Online Forms",
+    description:"Government and other online application assistance.",
+    list:[
+      "Online form filling",
+      "Government application forms",
+      "Application checking",
+      "Document upload assistance",
+      "Application status support"
+    ],
+    url:"https://services.india.gov.in/"
+  },
+
+
+  print: {
+    icon:"🖨️",
+    title:"Print & Scan",
+    description:"Digital document and printing assistance at Rahul Internet Cafe.",
+    list:[
+      "Document printing",
+      "Document scanning",
+      "PDF preparation",
+      "Document upload assistance",
+      "Digital document services"
+    ],
+    url:"https://www.digilocker.gov.in/"
+  },
+
+
+  certificates: {
+    icon:"📜",
+    title:"Certificates",
+    description:"Find and access government certificate services.",
+    list:[
+      "Birth Certificate services",
+      "Death Certificate services",
+      "Income Certificate services",
+      "Domicile / Resident services",
+      "Other government certificate services"
+    ],
+    url:"https://services.india.gov.in/"
+  },
+
+
+  result: {
+    icon:"🎓",
+    title:"Result & Admit Card",
+    description:"Online assistance for official examination services.",
+    list:[
+      "Exam result checking",
+      "Admit card download",
+      "Application status",
+      "Exam-related document printing",
+      "Official portal assistance"
+    ],
+    url:"https://services.india.gov.in/"
+  },
+
+
+  eshram: {
+    icon:"👷",
+    title:"E-Shram",
+    description:"Official e-Shram portal for unorganised workers.",
+    list:[
+      "E-Shram registration",
+      "Profile-related services",
+      "Update available details",
+      "E-Shram related information",
+      "Official portal assistance"
+    ],
+    url:"https://www.eshram.gov.in/"
+  },
+
+
+  abha: {
+    icon:"❤️",
+    title:"ABHA Card",
+    description:"ABHA and digital health-related online services.",
+    list:[
+      "ABHA creation assistance",
+      "Digital health ID services",
+      "Health record-related services",
+      "Online health services",
+      "Official portal assistance"
+    ],
+    url:"https://abha.abdm.gov.in/"
+  },
+
+
+  applications: {
+    icon:"💻",
+    title:"Online Applications",
+    description:"Online application and government service assistance.",
+    list:[
+      "Government application forms",
+      "Online registrations",
+      "Document uploads",
+      "Application status checking",
+      "Digital service assistance"
+    ],
+    url:"https://services.india.gov.in/"
+  },
+
+
+  other: {
+    icon:"⚡",
+    title:"Other Online Services",
+    description:"Need another online service? Contact Rahul Internet Cafe.",
+    list:[
+      "Government online services",
+      "Digital document services",
+      "Online applications",
+      "Form filling",
+      "Ask us about available services"
+    ],
+    url:"https://services.india.gov.in/"
+  }
+
+};
+
+
+/* OPEN SERVICE */
+
+function openService(serviceName){
+
+  const service = services[serviceName];
+
+  if(!service){
+    return;
+  }
+
+  document.getElementById("modalIcon").textContent =
+    service.icon;
+
+  document.getElementById("modalTitle").textContent =
+    service.title;
+
+  document.getElementById("modalDescription").textContent =
+    service.description;
+
+  const list =
+    document.getElementById("modalList");
+
+  list.innerHTML = "";
+
+  service.list.forEach(function(item){
+
+    const li = document.createElement("li");
+
+    li.textContent = item;
+
+    list.appendChild(li);
+
+  });
+
+
+  document.getElementById("officialButton").href =
+    service.url;
+
+  document.getElementById("serviceModal")
+    .classList.add("active");
+
+  document.body.style.overflow = "hidden";
+}
+
+
+/* CLOSE SERVICE */
+
+function closeModal(){
+
+  document.getElementById("serviceModal")
+    .classList.remove("active");
+
+  document.body.style.overflow = "auto";
+}
+
+
+/* CLOSE BY CLICKING OUTSIDE */
+
+function closeOutside(event){
+
+  if(event.target.id === "serviceModal"){
+    closeModal();
+  }
+
+}
+
+
+/* ESCAPE KEY */
+
+document.addEventListener("keydown",function(event){
+
+  if(event.key === "Escape"){
+    closeModal();
+  }
+
+});
+
+</script>
+
+</body>
+</html>
+```
